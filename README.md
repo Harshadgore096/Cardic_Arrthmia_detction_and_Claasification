@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+// Cardiac Arrhythmia Detection and Classification System
 
-## Getting Started
+// ✅ Tech Stack:
+// - Frontend: Next.js with Tailwind CSS (inline)
+// - Backend: Node.js + Express.js
+// - Database: MongoDB with Mongoose
+// - ML Model: TensorFlow (Python) served via Flask API
 
-First, run the development server:
+// This codebase consists of:
+// 1. Next.js frontend for UI
+// 2. Express backend for patient data management
+// 3. Python TensorFlow server for predictions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+// Note: Full code implementation is not provided as per request. This README is structured for GitHub.
+
+/* ========================== */
+
+# Cardiac Arrhythmia Detection and Classification
+
+This web application detects and classifies cardiac arrhythmias using a trained machine learning model. Built using the MERN stack + TensorFlow, it offers real-time patient data management and diagnostic insights.
+
+## 🏗️ Project Structure
+
+```
+root/
+├── frontend/         # Next.js + Tailwind CSS
+├── backend/          # Node.js + Express + Mongoose
+├── ml_model/         # TensorFlow Flask server
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
+- Upload ECG data for classification
+- Visual ECG signal representation (Chart.js)
+- RESTful API to retrieve patient history
+- Secure backend to store and fetch data
+- TensorFlow ML model for arrhythmia classification
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Technologies
+- **Frontend**: Next.js, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB using Mongoose
+- **Machine Learning**: Python, TensorFlow, Flask
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Setup Instructions
 
-## Learn More
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Backend
+```bash
+cd backend
+npm install
+node index.js
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ML Model
+```bash
+cd ml_model
+pip install -r requirements.txt
+python app.py
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧠 Machine Learning Model
+- Trained on the MIT-BIH Arrhythmia Dataset
+- Uses CNN/LSTM architecture for sequence classification
+- Returns prediction confidence & class
 
-## Deploy on Vercel
+## ⚙️ API Endpoints
+### Backend
+- `POST /api/patient` – Add new patient record
+- `GET /api/patient/:id` – Get patient data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ML Server
+- `POST /predict` – Send ECG data, receive arrhythmia class
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💾 Data Storage
+- MongoDB stores all patient records including ECG results and timestamps
+
+## 📊 Visualizations
+- ECG signals and predictions are shown in the browser via Chart.js
+
+## 🛡️ Security
+- Basic validation on all endpoints
+- CORS + sanitization + helmet for safety
+
+
+
+> Built with ❤️ by Harshad Gore
