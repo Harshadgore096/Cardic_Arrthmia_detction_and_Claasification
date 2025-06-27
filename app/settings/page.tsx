@@ -15,7 +15,7 @@ export default function Settings() {
     phoneNumber: "",
     dateOfBirth: "",
     gender: "",
-    address: "",
+    address: "",    
   })
 
   const handleUpdateInfo = async () => {
