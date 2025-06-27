@@ -12,7 +12,6 @@ export default function Visualization() {
   const [ecgData, setEcgData] = useState<number[]>([])
 
   useEffect(() => {
-    // Generate sample ECG data
     const generateECGData = () => {
       const data = []
       for (let i = 0; i < 1000; i++) {

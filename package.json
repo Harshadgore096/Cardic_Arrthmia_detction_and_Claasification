@@ -16,6 +16,7 @@
     "@radix-ui/react-progress": "^1.1.7",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^0.522.0",
+    "mongoose": "^8.16.1",
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
